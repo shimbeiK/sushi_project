@@ -1,0 +1,334 @@
+<!doctype html> 	<!--これがHTMLである　と示す-->
+<html lang="ja">	<!--言語は日本語である-->
+	<head>
+		<meta charset="UTF-8">
+		<title>タブのタイトル名</title>
+		<meta name="description" connect="タイトル名（裏側）">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="popup.css">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+		<!-- <style>
+			.sushineta {
+				display:grid;
+				gap:26px;
+				grid-template-columns:1fr 1fr;
+				margin-top:10%;
+				margin-bottom:50px;
+			}
+		</style> -->
+		<!--
+			<link></link>
+			<a href="~~.com">　リンク名　</a>
+			<h1(~h6)>　見出しとその大きさ　</h1(~h6)>
+			<ul>　番号なし箇条書き　</ul>
+			<ol>　番号あり箇条書き　</ol>
+			<li>　箇条書きの項目　</li>
+			<br>　改行　
+			<strong>　太字に変換　</strong>
+			<img src="~~.jpg" alt="　画像が表示されなかったとき用のタイトル　">
+			<blockquote>　引用文　</blockquote>
+			<small>　著作権表記や法的表記　</small>
+			<span>　CSSの装飾用　</span>
+			<audio>　音声データの埋め込み　</audio>
+			<video>　動画データの埋め込み　</video>
+			<scrript>　JavaScriptの読み込みによく使われる　</script>
+
+		-->
+	</head>
+		
+	<body>
+		<br>
+		<br>
+		<br>
+		<br>
+
+        <!-- ハンバーガータグからページ選択　紹介ページは強調する -->
+		<header>
+			<div class="header-area">
+			<div class="logo">
+				<div class="logo_title">team D</div>			
+			</div>
+			  <div class="hamburger">
+				<!-- ハンバーガーメニューの線 -->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- /ハンバーガーメニューの線 -->
+			  </div>
+			</div>
+			<ul class="slide-menu">
+				<li>
+					<a id="hamburger" href="./ilustlate.html">機構紹介</a>
+				</li>
+				<li>
+					<a id="hamburger" href="http://sushin.php.xdomain.jp/Info_Kitano.html">My page</a>
+				</li>
+				<li>
+					<a id="hamburger" href="./leguration.pdf">本研究のレギュレーション</a>
+				</li>
+				<li>
+					<a href="https://www.ct.omu.ac.jp/">公大高専　ホームページ</a>
+				</li>
+
+			</ul>
+			<script src="hamburger.js"></script>
+		  </header>
+
+			<div class="alert">
+				<ul>
+					<div class="nortice">
+						<ol>
+							<li>
+								userIDを記入する
+							</li>
+							<li>
+								寿司の数をそれぞれ選択する
+							</li>								
+							<li>
+								「送信」ボタンを押す！
+							</li>
+						</ol>
+					</div>
+						<h2 class="urgency">
+							userIDは後で使用するので<br>
+							忘れないでください
+						</h2>
+				</ul>
+			</div>
+			  
+			<!-- アイコン　なんか目を引くやつを　-->
+	
+			<!-- 2x3の6分割商品選択画面　画像を押したらページ遷移したい -->
+	
+	
+			<div class="main_content">
+				　<br>	
+			<form class="allbox" action="http://sushin.php.xdomain.jp/sushi/sushihonban.php" method="POST">
+				<div class="id">
+					<input type="text" id="in" name="id" placeholder="userID"> <!--type="text"は入力されたテキストをそのまま表示-->
+				</div>
+					
+					<!-- ポップアップで表示する内容を選択する -->
+					<div id="popup1" class="overlay">
+						<div class="popup">
+							<h2>マグロ　　<a class="close" href="#">&times;</a></h2>
+							<div class="content">
+								<!-- 画像を選択 -->
+								<img src="maguro.jpg" width="100%" alt="miritary">
+								<div class="sushi">
+									<img src="" alt="">
+									<select id="maguro" name="maguro" list="neta" plaseholder="マグロ">
+										<option value="0">0</option>
+										<option value="1">1</option>
+									</select> 
+								  </div>
+							</div>
+						</div>
+					</div>				
+								
+					<div id="popup2" class="overlay">
+						<div class="popup">
+							<h2>エビ　　<a class="close" href="#">&times;</a></h2>
+							<div class="content">
+								<img src="ebi.jpg" width="100%" alt="miritary">
+								<div class="sushi">
+									<img src="" alt="">
+									<select id="ebi" name="ebi" list="neta" plaseholder="エビ">
+										<option value="0">0</option>
+										<option value="1">1</option>
+									</select> 
+								  </div>
+							</div>
+						</div>
+					</div>	
+	
+					<div id="popup3" class="overlay">
+						<div class="popup">
+							<h2>イカ　　<a class="close" href="#">&times;</a></h2>
+							<div class="content">
+								<img src="ika.jpg" width="100%" alt="miritary">
+								<div class="sushi">
+									<img src="" alt="">
+									<select id="ika" name="ika" list="neta" plaseholder="イカ">
+										<option value="0">0</option>
+										<option value="1">1</option>
+
+									</select> 
+								  </div>
+							</div>
+						</div>
+					</div>		
+	
+					<div id="popup4" class="overlay">
+						<div class="popup">
+							<h2>玉子　　<a class="close" href="#">&times;</a></h2>
+							<div class="content">
+								<img src="tamago.jpg" width="100%" alt="miritary">
+								<div class="sushi">
+									<img src="" alt="">
+									<select id="tamago" name="tamago" list="neta" plaseholder="玉子">
+										<option value="0">0</option>
+										<option value="1">1</option>
+
+									</select> 
+								  </div>
+							</div>
+						</div>
+					</div>	
+	
+					<div id="popup5" class="overlay">
+						<div class="popup">
+							<h2>ウニ　　<a class="close" href="#">&times;</a></h2>
+							<div class="content">
+								<img src="uni.jpg" width="100%" alt="miritary">
+								<div class="sushi">
+									<img src="" alt="">
+									<select id="uni" name="uni" list="neta" plaseholder="ウニ">
+										<option value="0">0</option>
+										<option value="1">1</option>
+
+									</select> 
+								  </div>
+							</div>
+						</div>
+					</div>	
+								
+					<div id="popup6" class="overlay">
+						<div class="popup">
+							<h2>イクラ　　<a class="close" href="#">&times;</a></h2>
+							<div class="content">
+								<img src="ikura.jpg" width="100%" alt="miritary">
+								<div class="sushi">
+									<img src="" alt="">
+									<select id="ikura" name="ikura" list="neta" plaseholder="イクラ">
+										<option value="0">0</option>
+										<option value="1">1</option>
+
+									</select> 
+								  </div>
+							</div>
+						</div>
+					</div>				
+	
+					<div class="sushineta">
+						<div class="box">
+						<!-- ポップアップの画像を選択する -->
+						<a href="#popup1">
+							<div class="click">
+								<img class="picture" src="maguro.jpg" width="100%" alt="miritary">
+								マグロ
+								<!-- 選択した値をリアルタイムで表示するためのディビジョンを追加します -->
+								<div class="selected">
+									数量: <span id="displaymaguro">0</span>
+								</div>
+		
+								<script>
+									// ドロップダウンメニューの値が変更されたときに表示を更新します
+									document.getElementById("maguro").addEventListener("change", function () {
+										const maguroValue = this.value;
+										document.getElementById("displaymaguro").textContent = maguroValue;
+									});
+								</script>
+		
+							</div>
+						</a>
+						<a href="#popup2">
+							<div class="click">
+								<img class="picture" src="ebi.jpg" width="100%" alt="miritary">
+								エビ
+								<div class="selected">
+									数量: <span id="display-ebi">0</span>
+								</div>
+		
+								<script>
+									// ドロップダウンメニューの値が変更されたときに表示を更新します
+									document.getElementById("ebi").addEventListener("change", function () {
+										const ebi_Value = this.value;
+										document.getElementById("display-ebi").textContent = ebi_Value;
+									});
+								</script>
+							</div>
+						</a>
+						<a href="#popup3">
+							<div class="click">
+								<img class="picture" src="ika.jpg" width="100%" alt="miritary">
+								イカ
+								<div class="selected">
+									数量: <span id="display-ika">0</span>
+								</div>
+		
+								<script>
+									// ドロップダウンメニューの値が変更されたときに表示を更新します
+									document.getElementById("ika").addEventListener("change", function () {
+										const ika_Value = this.value;
+										document.getElementById("display-ika").textContent = ika_Value;
+									});
+								</script>
+							</div>
+						</a>
+						<a href="#popup4">
+							<div class="click">
+								<img class="picture" src="tamago.jpg" width="100%" alt="miritary">
+								玉子
+								<div class="selected">
+									数量: <span id="display-tamago">0</span>
+								</div>
+		
+								<script>
+									// ドロップダウンメニューの値が変更されたときに表示を更新します
+									document.getElementById("tamago").addEventListener("change", function () {
+										const tamago_Value = this.value;
+										document.getElementById("display-tamago").textContent = tamago_Value;
+									});
+								</script>
+							</div>
+						</a>
+						<a href="#popup5">
+							<div class="click">
+								<img class="picture" src="uni.jpg" width="100%" alt="miritary">
+								ウニ
+								<div class="selected">
+									数量: <span id="display-uni">0</span>
+								</div>
+		
+								<script>
+									// ドロップダウンメニューの値が変更されたときに表示を更新します
+									document.getElementById("uni").addEventListener("change", function () {
+										const uni_Value = this.value;
+										document.getElementById("display-uni").textContent = uni_Value;
+									});
+								</script>
+							</div>
+						</a>
+						<a href="#popup6">
+							<div class="click">
+								<img class="picture" src="ikura.jpg" width="100%" alt="miritary">
+								イクラ
+								<div class="selected">
+									数量: <span id="display-ikura">0</span>
+								</div>
+		
+								<script>
+									// ドロップダウンメニューの値が変更されたときに表示を更新します
+									document.getElementById("ikura").addEventListener("change", function () {
+										const ikura_Value = this.value;
+										document.getElementById("display-ikura").textContent = ikura_Value;
+									});
+								</script>
+							</div>
+						</a>
+	
+						</div>			
+						<input type="submit" value="送信" class="click" id="submit">
+						<br>
+					</div>
+				
+		</form>
+		  </div>
+
+		  <br>
+
+        <!-- キャンペーン情報 -->
+	</body>
+</html>

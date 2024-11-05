@@ -1,0 +1,251 @@
+body {
+  font-family: Arial, sans-serif;
+  background: rgba(189, 246, 255, 0.9);
+  /* background-image: url(背景ロゴ100.png); */
+  background-size: 30%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+input[id="in"] {
+  width: 300px;
+  height: 40px;
+  font-size: 6vw;
+}
+
+select {
+  margin-top: 5vh;
+  width: 50vw;
+  height: 6vh;
+}
+
+a[id="hamburger"] {
+  color: #fff;
+  font-size: 5vw;
+}
+
+header {
+  position: fixed;
+  top: 0vh;
+  right: 0%;
+  width: 100%;
+  height: 10%;
+  padding: 10px;
+  background-color: #31a9ee;
+  background-image: url(manaita.png);
+  color: #000000;
+  text-align: center;
+}
+
+.alert{
+  margin-top: 5vh;
+  text-align: center;
+  border: 2px solid #160043a8;
+  /* border-radius: 20px/50px; */
+  background-color: rgb(239, 248, 255);
+  margin-bottom: 5vh;
+}
+
+.main_content {
+  text-align: center;
+  border: 2px solid #160043a8;
+  /* border-radius: 20px/50px; */
+  /* background-color: rgb(211, 235, 255); */
+  background-image: url(mokume.jpg);
+  margin-bottom: 15vh;
+}
+
+.logo {
+  position: fixed;
+  color: #000e38;
+  top: 3vh;
+  right: 40vw;
+}
+.logo_title{
+  top: 3%;
+  font-family: "HGP行書体","Great Vibes";
+  font-size: 12vw;
+  font-weight: 700;
+}
+.hamburger {
+  width: 8vw;
+  height: 6vh;
+  position: fixed;
+  top: 3vh;
+  right: 10vw;
+}
+
+.hamburger span {
+  position: absolute;
+  width: 7vh;
+  height: 1vh;
+  background-color: rgb(0, 0, 141);
+  transition: .7s;
+}
+
+ol {
+  text-align: center;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+.notice{
+  text-align: left;
+}
+
+.urgency {
+  color: rgb(169, 33, 33);
+  font-family: "HGP行書体","Great Vibes";
+  font-size: 7vw;
+}
+
+.hamburger span:first-of-type {
+  top: 0;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 50%;
+}
+
+.hamburger span:last-of-type {
+  top: 100%;
+}
+
+.sushineta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* ボタンが縦に配置されるように指定 */
+}
+
+.slide-menu {
+  background-color: rgba(0, 0, 0, .8);
+  position: fixed;
+  top: 65px;
+  width: 100%;
+  left: 0;
+  transform: translateX(100%);
+  transition: .5s;
+  color: #fff;
+}
+
+.slide-menu li {
+  color: #fff;
+  line-height: 400%;
+  text-align: center;
+}
+
+.hamburger.active span:first-of-type {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:last-of-type {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.slide-menu.active {
+  transform: translateX(0);
+}
+
+.box {
+  width: 90vw;
+  background: rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  text-align: center;
+  display: grid;
+  gap: 3vw;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.click {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  padding: 1vw;
+  background-color: #fff;
+  color: #000000;
+  border: 2px solid #160043a8;
+  /* border-radius: 20px/50px; */
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.click:hover {
+  background: #066fd8;
+}
+
+.overlay {
+  position: fixed;
+  top: 0vh;
+  bottom: 0vh;
+  left: 0vw;
+  right: 0vw;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  position: relative;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  /* border-radius: 5px; */
+  width: 100%;
+  position: flex;
+  transition: all .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  transition: all 200ms;
+  font-size:20vw;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0c1f69;
+}
+
+.popup .close:hover {
+  color: #00dbdb;
+}
+
+.popup .content img {
+  display: flex;
+  justify-content: center;
+}
